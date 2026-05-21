@@ -7,13 +7,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
         body { font-family: 'Inter', sans-serif; }
         .title-font { font-family: 'Cinzel', serif; }
-        .hero-bg { background: radial-gradient(circle at center, rgba(59, 7, 100, 0.95) 0%, #000 70%); }
-        .coin-glow { animation: pulse 4s ease-in-out infinite; filter: drop-shadow(0 0 60px #a5b4fc); }
-        @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
-        .neon { text-shadow: 0 0 20px #a5b4fc, 0 0 40px #a5b4fc; }
+        .story-font { font-family: 'Playfair Display', serif; }
+        .hero-bg { 
+            background: radial-gradient(circle at center, rgba(30, 10, 60, 0.95) 0%, #000 70%);
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://source.unsplash.com/random/1920x1080/?cosmic,nebula');
+            background-size: cover;
+        }
+        .coin-video { border-radius: 9999px; box-shadow: 0 0 80px rgba(165, 180, 252, 0.6); }
+        .neon { text-shadow: 0 0 30px #a5b4fc, 0 0 60px #c084fc; }
     </style>
 </head>
 <body class="bg-black text-white overflow-x-hidden">
@@ -34,48 +38,41 @@
 
     <!-- Hero -->
     <section class="hero-bg min-h-screen flex items-center pt-20 relative">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <img src="https://your-coin-image-url-here" alt="Veilora Coin" 
-                 class="coin-glow mx-auto w-64 md:w-80 mb-8 rounded-3xl border border-violet-400/50">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="title-font text-7xl md:text-8xl neon mb-8">THE VEIL LIFTS</h1>
             
-            <h1 class="title-font text-7xl md:text-8xl leading-none neon mb-6">THE VEIL LIFTS</h1>
-            <p class="text-4xl text-violet-300 mb-10">Veilora (VLR) • Cosmic Sovereignty on Solana</p>
+            <!-- Video 1 -->
+            <video autoplay loop muted playsinline class="coin-video mx-auto w-80 md:w-96 mb-12">
+                <source src="coin1.mp4" type="video/mp4">
+            </video>
 
-            <div class="inline-flex items-center gap-4 bg-white/10 backdrop-blur-md px-8 py-4 rounded-3xl border border-violet-400/30 mb-12">
-                <span class="text-emerald-400 text-2xl">● LIVE</span>
-                <span class="text-3xl font-mono">$5.3K Market Cap</span>
+            <p class="text-3xl text-violet-200 mb-16 max-w-3xl mx-auto leading-relaxed story-font">
+                In the shadowed folds between dimensions, where ancient cosmic forces meet the unyielding pulse of blockchain eternity, 
+                <span class="text-white">Veilora</span> emerges — not as mere currency, but as the key to unlock humanity’s next evolutionary leap.
+            </p>
+
+            <!-- Video 2 -->
+            <video autoplay loop muted playsinline class="coin-video mx-auto w-80 md:w-96 mb-16">
+                <source src="coin2.mp4" type="video/mp4">
+            </video>
+
+            <div class="max-w-2xl mx-auto bg-black/60 backdrop-blur-xl border border-violet-400/30 rounded-3xl p-10 text-left">
+                <h2 class="text-3xl font-bold mb-6 text-center neon">The Legend</h2>
+                <p class="text-violet-200 leading-relaxed text-lg story-font">
+                    Born from the convergence of quantum enigma and decentralized sovereignty, Veilora is the enigmatic guardian of wealth in an age of digital gods. 
+                    Its protocol weaves zero-knowledge mysticism with adaptive AI oracles...<br><br>
+                    Holders become <span class="text-fuchsia-400">Veilwalkers</span>, initiates into a secret order of financial ascendants. 
+                    Every transaction fuels a self-sustaining ecosystem shrouded in mystery.
+                </p>
             </div>
 
             <a href="https://moonshot.com/YOUR-COIN-LINK-HERE" target="_blank" 
-               class="block max-w-md mx-auto bg-white text-black py-6 text-2xl font-bold rounded-3xl hover:scale-105 transition mb-16">
-                BUY $VLR NOW ON MOONSHOT
+               class="mt-16 inline-block bg-white text-black px-12 py-6 text-2xl font-bold rounded-3xl hover:scale-110 transition">
+                ENTER THE VEIL • BUY $VLR
             </a>
 
-            <!-- Visual Stats -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-                <div class="bg-zinc-900/70 p-6 rounded-3xl border border-violet-500/20">
-                    <p class="text-violet-400 text-sm">Holders</p>
-                    <p class="text-4xl font-mono">2</p>
-                </div>
-                <div class="bg-zinc-900/70 p-6 rounded-3xl border border-violet-500/20">
-                    <p class="text-violet-400 text-sm">Supply</p>
-                    <p class="text-4xl font-mono">1B</p>
-                </div>
-                <div class="bg-zinc-900/70 p-6 rounded-3xl border border-violet-500/20">
-                    <p class="text-violet-400 text-sm">24h Vol</p>
-                    <p class="text-4xl font-mono">$158</p>
-                </div>
-                <div class="bg-zinc-900/70 p-6 rounded-3xl border border-violet-500/20">
-                    <p class="text-violet-400 text-sm">Created</p>
-                    <p class="text-4xl font-mono">1h ago</p>
-                </div>
-            </div>
+            <p class="mt-12 text-xs opacity-60">High risk • New token • DYOR • Not financial advice</p>
         </div>
     </section>
-
-    <!-- Disclaimer -->
-    <div class="text-center py-12 text-sm opacity-60">
-        High risk • New token • DYOR • Not financial advice
-    </div>
 </body>
 </html>
