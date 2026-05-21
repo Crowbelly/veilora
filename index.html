@@ -1,72 +1,81 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veilora | The Veil Lifts</title>
+    <title>Veilora (VLR) • The Veil Lifts</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap');
-        body { font-family: 'Inter', system-ui, sans-serif; }
+        body { font-family: 'Inter', sans-serif; }
         .title-font { font-family: 'Cinzel', serif; }
-        .hero-bg { background: radial-gradient(circle at center, rgba(59, 7, 100, 0.9) 0%, rgba(0, 0, 0, 1) 70%); }
-        .coin-glow { animation: coinPulse 4s ease-in-out infinite; filter: drop-shadow(0 0 60px rgb(167 139 250)); }
-        @keyframes coinPulse { 0%, 100% { transform: scale(1) rotate(0deg); } 50% { transform: scale(1.05) rotate(8deg); } }
-        .neon-text { text-shadow: 0 0 10px #a5b4fc, 0 0 20px #a5b4fc; }
+        .hero-bg { background: radial-gradient(circle at center, rgba(59, 7, 100, 0.95) 0%, #000 70%); }
+        .coin-glow { animation: pulse 4s ease-in-out infinite; filter: drop-shadow(0 0 60px #a5b4fc); }
+        @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+        .neon { text-shadow: 0 0 20px #a5b4fc, 0 0 40px #a5b4fc; }
     </style>
 </head>
 <body class="bg-black text-white overflow-x-hidden">
 
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-lg border-b border-violet-500/20">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+    <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-lg z-50 border-b border-violet-500/30">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-full flex items-center justify-center text-xl font-bold">V</div>
-                <span class="title-font text-3xl tracking-widest neon-text">VEILORA</span>
+                <span class="text-4xl">🌌</span>
+                <span class="title-font text-4xl tracking-widest neon">VEILORA</span>
             </div>
-            <div class="hidden md:flex items-center gap-10 text-lg">
-                <a href="#about" class="hover:text-violet-400 transition">THE VEIL</a>
-                <a href="#features" class="hover:text-violet-400 transition">POWER</a>
-                <a href="#join" class="hover:text-violet-400 transition">ASCEND</a>
-            </div>
-            <button onclick="document.getElementById('join').scrollIntoView({behavior: 'smooth'})" class="px-8 py-3 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-full font-semibold hover:scale-105 transition">ENTER THE VEIL</button>
+            <a href="https://moonshot.com/YOUR-COIN-LINK-HERE" target="_blank" 
+               class="bg-gradient-to-r from-violet-600 to-fuchsia-600 px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition">
+                BUY $VLR ON MOONSHOT →
+            </a>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section class="hero-bg min-h-screen flex items-center relative pt-20">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8">
-                <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-violet-400/30">
-                    <span class="text-emerald-400">● LIVE</span>
-                    <span class="text-sm tracking-widest">PRESALE PHASE I</span>
-                </div>
-                <h1 class="title-font text-7xl md:text-8xl leading-none tracking-tighter neon-text">THE VEIL<br>LIFTS</h1>
-                <p class="text-3xl md:text-4xl text-violet-300 font-light">Veilora (VLR) — The Key to Digital Sovereignty</p>
-                <div class="flex flex-wrap gap-4">
-                    <button onclick="document.getElementById('join').scrollIntoView({behavior: 'smooth'})" class="px-10 py-5 bg-white text-black font-bold text-xl rounded-2xl hover:bg-violet-300 transition">CLAIM YOUR SHADOW</button>
-                </div>
+    <section class="hero-bg min-h-screen flex items-center pt-20 relative">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <img src="https://your-coin-image-url-here" alt="Veilora Coin" 
+                 class="coin-glow mx-auto w-64 md:w-80 mb-8 rounded-3xl border border-violet-400/50">
+            
+            <h1 class="title-font text-7xl md:text-8xl leading-none neon mb-6">THE VEIL LIFTS</h1>
+            <p class="text-4xl text-violet-300 mb-10">Veilora (VLR) • Cosmic Sovereignty on Solana</p>
+
+            <div class="inline-flex items-center gap-4 bg-white/10 backdrop-blur-md px-8 py-4 rounded-3xl border border-violet-400/30 mb-12">
+                <span class="text-emerald-400 text-2xl">● LIVE</span>
+                <span class="text-3xl font-mono">$5.3K Market Cap</span>
             </div>
-            <div class="flex justify-center">
-                <img src="https://files.oaiusercontent.com/file-6zG8vK7pL9mXvN3qR2tY5uW?se=2026-05-21T00%3A00%3A00Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D3628800%2C%20immutable&rscd=attachment%3B%20filename%3DGenerated%20Image.jpg" alt="Veilora Coin" class="coin-glow w-full max-w-md rounded-3xl shadow-2xl">
+
+            <a href="https://moonshot.com/YOUR-COIN-LINK-HERE" target="_blank" 
+               class="block max-w-md mx-auto bg-white text-black py-6 text-2xl font-bold rounded-3xl hover:scale-105 transition mb-16">
+                BUY $VLR NOW ON MOONSHOT
+            </a>
+
+            <!-- Visual Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div class="bg-zinc-900/70 p-6 rounded-3xl border border-violet-500/20">
+                    <p class="text-violet-400 text-sm">Holders</p>
+                    <p class="text-4xl font-mono">2</p>
+                </div>
+                <div class="bg-zinc-900/70 p-6 rounded-3xl border border-violet-500/20">
+                    <p class="text-violet-400 text-sm">Supply</p>
+                    <p class="text-4xl font-mono">1B</p>
+                </div>
+                <div class="bg-zinc-900/70 p-6 rounded-3xl border border-violet-500/20">
+                    <p class="text-violet-400 text-sm">24h Vol</p>
+                    <p class="text-4xl font-mono">$158</p>
+                </div>
+                <div class="bg-zinc-900/70 p-6 rounded-3xl border border-violet-500/20">
+                    <p class="text-violet-400 text-sm">Created</p>
+                    <p class="text-4xl font-mono">1h ago</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="py-24 bg-gradient-to-b from-black to-zinc-950">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="title-font text-6xl mb-8 neon-text">Born from the Cosmos</h2>
-            <p class="text-xl text-violet-200">In the shadowed folds between dimensions... Veilora emerges — the key to humanity’s next evolutionary leap.</p>
-        </div>
-    </section>
-
-    <!-- More sections can be added later -->
-    <section id="join" class="py-32 bg-gradient-to-br from-violet-950 to-black text-center">
-        <h2 class="title-font text-6xl mb-6">Ready to Pierce the Veil?</h2>
-        <button onclick="alert('Presale link coming soon! Join Telegram for updates.')" class="px-12 py-6 bg-white text-black text-2xl font-bold rounded-3xl">BUY $VLR PRESALE</button>
-    </section>
-
+    <!-- Disclaimer -->
+    <div class="text-center py-12 text-sm opacity-60">
+        High risk • New token • DYOR • Not financial advice
+    </div>
 </body>
 </html>
