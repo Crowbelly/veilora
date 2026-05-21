@@ -6,54 +6,35 @@
     <title>Veilora (VLR) • The Veil Lifts</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .title-font { font-family: 'Cinzel', serif; }
-        .story-font { font-family: 'Playfair Display', serif; }
-        .hero-bg { background: radial-gradient(circle at center, rgba(30,10,60,0.95) 0%, #000 70%); }
-        .coin-video { border-radius: 9999px; box-shadow: 0 0 80px rgba(165,180,252,0.6); }
-        .neon { text-shadow: 0 0 30px #a5b4fc; }
+        body { font-family: system-ui, sans-serif; }
+        .hero { background: linear-gradient(to bottom, #1a0033, #000); }
+        .neon { text-shadow: 0 0 20px #c026d3, 0 0 40px #a5b4fc; }
     </style>
 </head>
 <body class="bg-black text-white">
 
-    <nav class="fixed top-0 w-full bg-black/90 backdrop-blur z-50 border-b border-violet-500/30">
-        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between">
-            <div class="flex items-center gap-3">
-                <span class="text-4xl">🌌</span>
-                <span class="title-font text-4xl neon">VEILORA</span>
-            </div>
-            <a href="https://moonshot.com/YOUR-COIN-LINK-HERE" target="_blank" 
-               class="bg-gradient-to-r from-violet-600 to-fuchsia-600 px-8 py-4 rounded-full font-bold">BUY $VLR</a>
-        </div>
-    </nav>
+    <div class="hero min-h-screen flex flex-col items-center justify-center text-center px-6 py-20">
+        <h1 class="text-7xl md:text-8xl font-bold neon mb-6">THE VEIL LIFTS</h1>
+        <h2 class="text-4xl text-violet-300 mb-12">Veilora (VLR)</h2>
 
-    <section class="hero-bg min-h-screen flex flex-col items-center justify-center pt-20 text-center px-6">
-        <h1 class="title-font text-7xl md:text-8xl neon mb-8">THE VEIL LIFTS</h1>
-
-        <!-- Video 1 -->
-        <video autoplay loop muted playsinline class="coin-video w-80 md:w-96 mb-12">
-            <source src="coin1.mp4" type="video/mp4">
-        </video>
-
-        <div class="max-w-3xl mx-auto">
-            <p class="story-font text-xl md:text-2xl text-violet-200 leading-relaxed">
+        <div class="max-w-2xl mx-auto text-lg leading-relaxed text-violet-100">
+            <p class="mb-8">
                 In the shadowed folds between dimensions, where ancient cosmic forces meet the unyielding pulse of blockchain eternity, 
-                <strong class="text-white">Veilora</strong> emerges — not as mere currency, but as the key to unlock humanity’s next evolutionary leap.
+                <strong>Veilora</strong> emerges — not as mere currency, but as the key to unlock humanity’s next evolutionary leap.
+            </p>
+            <p class="mb-8">
+                Born from quantum enigma and decentralized sovereignty, Veilora is the enigmatic guardian of wealth. 
+                Holders become <strong>Veilwalkers</strong>, initiates into a secret order of financial ascendants.
             </p>
         </div>
 
-        <!-- Video 2 -->
-        <video autoplay loop muted playsinline class="coin-video w-80 md:w-96 mt-12 mb-12">
-            <source src="coin2.mp4" type="video/mp4">
-        </video>
-
-        <a href="https://moonshot.com/YOUR-COIN-LINK-HERE" target="_blank" 
-           class="mt-8 inline-block bg-white text-black px-12 py-6 text-2xl font-bold rounded-3xl hover:scale-110 transition">
+        <a href="https://moonshot.com/YOUR-ACTUAL-COIN-LINK" 
+           target="_blank"
+           class="mt-10 bg-white text-black px-12 py-6 rounded-3xl text-2xl font-bold hover:scale-105 transition">
             BUY $VLR ON MOONSHOT →
         </a>
 
-        <p class="mt-12 text-sm opacity-60">High risk • New token • DYOR • Not financial advice</p>
-    </section>
+        <p class="mt-16 text-sm opacity-70">High risk • New token • DYOR • Not financial advice</p>
+    </div>
 </body>
 </html>
